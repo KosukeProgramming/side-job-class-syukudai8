@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クラス会_第8弾</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7ef3657719.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section class="column">
+        <div class="column__inner common__inner">
+            <div class="common-title__inner">
+                <h2 class="common-title">コラム</h2>
+                <p class="common-title-txt">
+                    テレビCMやマーケティング全般に関する武林の最新情報や<br>メディア掲載情報をお届けします。
+                </p>
+            </div>
+            <!-- /.column-title__inner -->
+
+            <hr>
+
+            <div class="column-content__inner">
+                
+                <div class="column_type__inner">
+                    <select name="column_type" id="column_type" class="column_type">
+                        <option value="" selected class="column_select">枠線の色が変わります</option>
+                        <option value="column1" class="column_select">レッド</option>
+                        <option value="column2" class="column_select">ブルー</option>
+                        <option value="column3" class="column_select">グリーン</option>
+                        <option value="column4" class="column_select">イエロー</option>
+                        <option value="column5" class="column_select">ゴールド</option>
+                    </select>
+                </div>
+                <div class="column-content">
+                    <div class="column-card">
+                        <img src="img/programming_bg.jpg" alt="" class="column-card-img">
+                        <div class="column-card-txt__inner">
+                            <time datetime="2011-11-18" class="column-card-time">2022.04.27</time>
+                            <p class="column-card-txt">
+                                ビジネスチャット市場分析レポート｜会社勤めの方に聞く、社内コミュニケーションの実態とは
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column-card">
+                        <img src="img/programming_bg.jpg" alt="" class="column-card-img">
+                        <div class="column-card-txt__inner">
+                            <time datetime="2011-11-18" class="column-card-time">2022.04.27</time>
+                            <p class="column-card-txt">
+                                ビジネスチャット市場分析レポート｜会社勤めの方に聞く、社内コミュニケーションの実態とは
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column-card">
+                        <img src="img/programming_bg.jpg" alt="" class="column-card-img">
+                        <div class="column-card-txt__inner">
+                            <time datetime="2011-11-18" class="column-card-time">2022.04.27</time>
+                            <p class="column-card-txt">
+                                ビジネスチャット市場分析レポート｜会社勤めの方に聞く、社内コミュニケーションの実態とは
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column-card">
+                        <img src="img/programming_bg.jpg" alt="" class="column-card-img">
+                        <div class="column-card-txt__inner">
+                            <time datetime="2011-11-18" class="column-card-time">2022.04.27</time>
+                            <p class="column-card-txt">
+                                テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column-card">
+                        <img src="img/programming_bg.jpg" alt="" class="column-card-img">
+                        <div class="column-card-txt__inner">
+                            <time datetime="2011-11-18" class="column-card-time">2022.04.27</time>
+                            <p class="column-card-txt">
+                                テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column-card">
+                        <img src="img/programming_bg.jpg" alt="" class="column-card-img">
+                        <div class="column-card-txt__inner">
+                            <time datetime="2011-11-18" class="column-card-time">2022.04.27</time>
+                            <p class="column-card-txt">
+                                テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.column-content__inner -->
+        </div>
+        <!-- /.column__inner -->
+    </section>
+    <!-- /.column -->
+
+    <script>
+        // 以下、セレクトボックスを変更すると枠線の色が変わる処理
+
+        let select = document.querySelector('.column_type');    // select要素を取得  
+        let option = document.querySelectorAll('.column_select');  // option要素をすべて取得
+        let column_card = document.querySelectorAll('.column-card');  // カードをすべて取得
+        let borderColor;
+
+        // セレクトボックスが変更された時、以下の処理を行う
+        select.addEventListener('change', function() {
+
+            var index = this.selectedIndex;
+            var valueNumber = option[index].value;
+
+            if(index !== 0) {
+                console.log(valueNumber);
+                switch(valueNumber){
+                    case "column1":
+                        borderColor = "red";
+                        break;
+                    case "column2":
+                        borderColor = "blue";
+                        break;
+                    case "column3":
+                        borderColor = "green";
+                        break;
+                    case "column4":
+                        borderColor = "yellow";
+                        break;
+                    case "column5":
+                        borderColor = "gold";
+                        break;
+                }
+                column_card.forEach( element => element.style.borderColor = borderColor);   
+            } else {
+                // 
+                column_card.forEach( element => element.style.borderColor = "black");   
+            }
+
+        });
+
+
+    </script>
+</body>
+</html>
