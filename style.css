@@ -195,6 +195,8 @@ input, select {
     -webkit-line-clamp: 7;
     overflow: hidden;
 }
+
+/* 850px以下 */
 @media screen and (max-width:850px) {
     .column-card {
         width: calc((100% - 30px) / 2);
@@ -209,6 +211,8 @@ input, select {
         -webkit-line-clamp: 5;
     }
 }
+
+/* 650px以下 */
 @media screen and (max-width:650px) {
     .column-content__inner {
         padding: 30px 10% 0;
@@ -223,6 +227,8 @@ input, select {
         -webkit-line-clamp: 2;
     }
 }
+
+/* 510px以下 */
 @media screen and (max-width:510px) {
     .column-card-txt {
         -webkit-line-clamp: 5;
